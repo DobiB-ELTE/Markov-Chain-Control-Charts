@@ -12,29 +12,29 @@ setDefaultCluster(cl=cl)	#set 'cl' as default cluster
 
 # h=0.2
 # k=1
-sigma=1				  #Process standard deviation (the distribution is normal)
-s=0.2				  #Expected number of shifts in an unit time interval
-delta=1	              #Expected shift size
+sigma=1			#Process standard deviation (the distribution is normal)
+s=0.2			#Expected number of shifts in an unit time interval
+delta=1			#Expected shift size
 
-RanRep=TRUE			  #Should the repair be random?
-	alpha=1			  		#Shape1 parameter for the random repair beta distribution
-	beta=3	          		#Shape2 parameter for the random repair beta distribution (This parametrization creates high probability for good repair and low probability for bad repair)              
-RanSam=TRUE			  #Should the sampling be random?
-	a=0.01			  #Shape1*t parameter for the random sampling time beta distribution (The shape1 parameter is A/t)
-	b=1				  #Shape2 parameter for the random sampling time beta distribution (With this parametrization, the probability of sampling is quite high)
-	StateDep=TRUE	  #Should the sampling probability also depend on the state of the process? (Beta (TRUE) or logistic function (FALSE))
-		q=1			  #The steepness of the curve of the logistic function
-		z=1	          #The logistic sigmoid's midpoint
+RanRep=TRUE		#Should the repair be random?
+	alpha=1		#Shape1 parameter for the random repair beta distribution
+	beta=3	        #Shape2 parameter for the random repair beta distribution (This parametrization creates high probability for good repair and low probability for bad repair)              
+RanSam=TRUE		#Should the sampling be random?
+	a=0.01		#Shape1*t parameter for the random sampling time beta distribution (The shape1 parameter is A/t)
+	b=1		#Shape2 parameter for the random sampling time beta distribution (With this parametrization, the probability of sampling is quite high)
+	StateDep=TRUE	#Should the sampling probability also depend on the state of the process? (Beta (TRUE) or logistic function (FALSE))
+		q=1	#The steepness of the curve of the logistic function
+		z=1	#The logistic sigmoid's midpoint
 
-cs=1				  #Sampling cost
-cf=10				  #False alarm cost
-co=20				  #Out-of-control cost 
-crb=10				  #Repair Base Cost
-crs=10	              #Repair Scaling Cost
+cs=1			#Sampling cost
+cf=10			#False alarm cost
+co=20			#Out-of-control cost 
+crb=10			#Repair Base Cost
+crs=10			#Repair Scaling Cost
 
-p=1					  #Weight of the expectation during optimisation, (1-p is the weight if the cost s.d.) 
-Vd=100				  #Number of Vdetized intervals
-V=5					  #Greatest distance from the target value taken into account
-Qparam=300	          #Maximum number of shifts considered in a sampling interval
+p=1			#Weight of the expectation during optimisation, (1-p is the weight if the cost s.d.) 
+Vd=100			#Number of Vdetized intervals
+V=5			#Greatest distance from the target value taken into account
+Qparam=300	        #Maximum number of shifts considered in a sampling interval
 		
-ALL=FALSE			  #Should all results be returned?
+ALL=FALSE		#Should all results be returned?
